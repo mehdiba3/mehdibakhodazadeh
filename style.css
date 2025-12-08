@@ -115,21 +115,57 @@ header ul li a:hover {
 
 /* Hero Section */
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
-#hero h1 {
-    font-size: 4rem;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    width: 100%;
 }
 
-#hero p {
+.hero-text {
+    text-align: right;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+}
+
+.hero-text p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.4);
+}
+
+.hero-socials {
+    margin-top: 1.5rem;
+}
+
+.hero-socials a {
+    color: var(--light-color);
+    font-size: 2rem;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.hero-socials a:hover {
+    color: var(--primary-color);
 }
 
 .cta-button {
@@ -161,7 +197,7 @@ header ul li a:hover {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
 }
 
@@ -184,9 +220,10 @@ header ul li a:hover {
 }
 
 .skill-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Adjusted font size */
     margin-bottom: 0.5rem;
 }
+
 
 /* Services Section */
 .services-list ul {
@@ -238,63 +275,4 @@ header ul li a:hover {
 
 .experience-item .company {
     font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--light-color);
-}
-
-.experience-item .date {
-    font-style: italic;
-    color: var(--dark-color);
-}
-
-/* Contact Section */
-#contact form {
-    max-width: 700px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#contact input, #contact textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #30415d;
-    background: var(--card-bg-color);
-    color: var(--light-color);
-    border-radius: 5px;
-    font-family: 'Vazirmatn', sans-serif;
-}
-
-#contact input::placeholder, #contact textarea::placeholder {
-    color: var(--dark-color);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--card-bg-color);
-    margin-top: 3rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-
-    header nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    header ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-    }
-    
-    header ul li {
-        padding: 0 8px;
-    }
-}
+    font-
