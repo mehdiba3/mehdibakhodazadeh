@@ -70,6 +70,18 @@ a {
     color: var(--primary-color);
 }
 
+/* Tel Link Style */
+a.tel-link {
+    text-decoration: none;
+    color: inherit; /* Inherits color from its parent (p tag) */
+    transition: color 0.3s;
+}
+
+a.tel-link:hover {
+    color: var(--primary-color);
+}
+
+
 /* Header */
 header {
     background: rgba(10, 25, 47, 0.85);
@@ -113,13 +125,19 @@ header ul li a:hover {
     color: var(--primary-color);
 }
 
+/* Main Content Wrapper (FIX for header overlap) */
+main {
+    padding-top: 75px; 
+}
+
+
 /* Hero Section */
 #hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 75px);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem 2rem;
+    padding: 2rem;
 }
 
 .hero-container {
@@ -313,102 +331,12 @@ header ul li a:hover {
     font-family: 'Vazirmatn', sans-serif;
 }
 
-/* Footer */
+/* Footer (Corrected) */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background: var(--card-bg-color);
     margin-top: 3rem;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-socials a {
-    color: var(--light-color);
-    font-size: 1.8rem;
-    margin: 0 0.5rem;
-    transition: color 0.3s;
-}
-
-.footer-socials a:hover {
-    color: var(--primary-color);
-}
-
-.footer-contact {
-    font-size: 0.9rem;
-    color: var(--dark-color);
-}
-
-/* ================================================= */
-/* ============== RESPONSIVE DESIGN ============== */
-/* ================================================= */
-@media (max-width: 992px) {
-    .hero-text h1 {
-        font-size: 2.8rem;
-    }
-    .hero-text p {
-        font-size: 1.3rem;
-    }
-    .hero-image img {
-        width: 240px;
-        height: 240px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 3rem 1rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-
-    /* === Responsive Header === */
-    header nav {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-    }
-    header ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 10px;
-        row-gap: 5px;
-        padding-top: 0.5rem;
-    }
-    header ul li {
-        padding: 0 5px;
-    }
-
-    /* === Responsive Hero Section === */
-    #hero {
-        min-height: auto;
-    }
-    .hero-container {
-        flex-direction: column-reverse; /* Puts image on top on mobile */
-        text-align: center;
-        gap: 2rem;
-    }
-    .hero-text {
-        text-align: center;
-    }
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-    .hero-image img {
-        width: 200px;
-        height: 200px;
-    }
-    .hero-socials {
-        justify-content: center;
-    }
-}
+.footer-so
