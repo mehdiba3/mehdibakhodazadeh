@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="main-header">
         <nav>
             <div class="logo">
                 <a href="#hero">مهدی باخدازاده</a>
@@ -25,7 +25,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section id="hero">
             <div class="hero-container">
@@ -125,7 +125,7 @@
             </div>
         </section>
 
-        <!-- Contact Section (UPDATED with tel link) -->
+        <!-- Contact Section -->
         <section id="contact" class="container">
             <h2><i class="fas fa-envelope"></i> تماس با من</h2>
             <div class="contact-info">
@@ -142,7 +142,6 @@
         </section>
     </main>
 
-    <!-- Footer (UPDATED with tel link) -->
     <footer>
         <div class="footer-socials">
             <a href="https://www.instagram.com/mehdibakhodazadeh" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -150,6 +149,27 @@
         <p>&copy; ۱۴۰۳ - تمامی حقوق برای مهدی باخدازاده محفوظ است.</p>
         <p class="footer-contact">شماره تماس: <a href="tel:+989163465648" class="tel-link">09163465648</a></p>
     </footer>
+
+    <!-- ===== JAVASCRIPT FOR HEADER FIX ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('main-header');
+            const mainContent = document.getElementById('main-content');
+
+            function setMainPadding() {
+                if (header && mainContent) {
+                    const headerHeight = header.offsetHeight;
+                    mainContent.style.paddingTop = headerHeight + 'px';
+                }
+            }
+
+            // Set padding on initial load
+            setMainPadding();
+
+            // Adjust padding on window resize
+            window.addEventListener('resize', setMainPadding);
+        });
+    </script>
 
 </body>
 </html>
