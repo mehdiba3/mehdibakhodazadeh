@@ -125,19 +125,17 @@ header ul li a:hover {
     color: var(--primary-color);
 }
 
-/* Main Content Wrapper (FIX for header overlap) */
-main {
-    padding-top: 75px; 
-}
+/* Main content padding is now handled by JavaScript */
 
 
 /* Hero Section */
 #hero {
-    min-height: calc(100vh - 75px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    /* We remove padding-top from here as main content has it */
 }
 
 .hero-container {
@@ -293,50 +291,4 @@ main {
 
 .experience-item h3 {
     font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-/* Contact Section */
-.contact-info {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-}
-
-.contact-info p {
-    color: var(--light-color);
-}
-
-.contact-info i {
-    margin-left: 8px;
-    color: var(--primary-color);
-}
-
-#contact form {
-    max-width: 700px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #30415d;
-    background: var(--card-bg-color);
-    color: var(--light-color);
-    border-radius: 5px;
-    font-family: 'Vazirmatn', sans-serif;
-}
-
-/* Footer (Corrected) */
-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: var(--card-bg-color);
-    margin-top: 3rem;
-}
-
-.footer-so
+    color: var(--primary
