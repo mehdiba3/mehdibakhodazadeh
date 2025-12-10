@@ -9,10 +9,10 @@
 </head>
 <body>
 
-    <header id="main-header">
+    <header>
         <nav>
             <div class="logo">
-                <a href="#hero">مهدی باخدازاده</a>
+                <a href="#">مهدی باخدازاده</a>
             </div>
             <ul>
                 <li><a href="#about">درباره من</a></li>
@@ -25,7 +25,7 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main>
         <!-- Hero Section -->
         <section id="hero">
             <div class="hero-container">
@@ -149,27 +149,6 @@
         <p>&copy; ۱۴۰۳ - تمامی حقوق برای مهدی باخدازاده محفوظ است.</p>
         <p class="footer-contact">شماره تماس: <a href="tel:+989163465648" class="tel-link">09163465648</a></p>
     </footer>
-
-    <!-- ===== JAVASCRIPT FOR HEADER FIX ===== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.getElementById('main-header');
-            const mainContent = document.getElementById('main-content');
-
-            function setMainPadding() {
-                if (header && mainContent) {
-                    const headerHeight = header.offsetHeight;
-                    mainContent.style.paddingTop = headerHeight + 'px';
-                }
-            }
-
-            // Set padding on initial load
-            setMainPadding();
-
-            // Adjust padding on window resize
-            window.addEventListener('resize', setMainPadding);
-        });
-    </script>
 
 </body>
 </html>
