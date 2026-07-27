@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mehdiba3.github.io/mehdibakhodazadeh/sitemap.xml
